@@ -1,5 +1,5 @@
+import { Usuario } from "@/src/types/Usuario";
 import { SQLiteDatabase } from "expo-sqlite";
-import { Usuario } from "../types/Usuario";
 
 export async function listarUsuarios(db: SQLiteDatabase) : Promise<Usuario[]> {
     return db.getAllAsync<Usuario>('SELECT * FROM USUARIOS;');
