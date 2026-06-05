@@ -68,11 +68,9 @@ function Header() {
         contentContainerStyle={s.navContent}
       >
         {[
-          { label: 'Início',      route: '/'           },
+          { label: 'Início',      route: '/index'           },
           { label: 'Quem somos', route: '/quem-somos' },
-          { label: 'Programas',  route: '/programas'  },
           { label: 'Notícias',   route: '/noticias'   },
-          { label: 'Doe agora',  route: '/doe'         },
           { label: 'Contato',    route: '/contato'     },
         ].map((item) => (
           <TouchableOpacity
@@ -190,7 +188,7 @@ export default function Index() {
           vulnerabilidade, oferecendo programas de habitação, educação e geração de renda.
         </Text>
         <View style={s.heroBtns}>
-          <TouchableOpacity style={s.btnPrimary} onPress={() => router.push('/doe')}>
+          <TouchableOpacity style={s.btnPrimary}>
             <Text style={s.btnPrimaryText}>❤️  Quero colaborar</Text>
           </TouchableOpacity>
           <TouchableOpacity style={s.btnSecondary} onPress={() => router.push('/quem-somos')}>
@@ -271,10 +269,10 @@ export default function Index() {
           Doe, seja voluntário ou divulgue o nosso trabalho. Toda contribuição importa.
         </Text>
         <View style={s.ctaBtns}>
-          <TouchableOpacity style={s.ctaBtnMain} onPress={() => router.push('/doe')}>
+          <TouchableOpacity style={s.ctaBtnMain}>
             <Text style={s.ctaBtnMainText}>💰  Quero doar</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={s.ctaBtnGhost} onPress={() => router.push('/voluntarios')}>
+          <TouchableOpacity style={s.ctaBtnGhost}>
             <Text style={s.ctaBtnGhostText}>👥  Ser voluntário</Text>
           </TouchableOpacity>
         </View>
@@ -284,9 +282,9 @@ export default function Index() {
       <View style={s.footer}>
         <Text style={s.footerText}>© 2026 Instituto Muda Depois — Todos os direitos reservados</Text>
         <View style={s.footerLinks}>
-          <Text style={s.footerLink} onPress={() => router.push('/privacidade')}>Privacidade</Text>
+          <Text style={s.footerLink} >Privacidade</Text>
           <Text style={s.footerDot}>·</Text>
-          <Text style={s.footerLink} onPress={() => router.push('/termos')}>Termos de uso</Text>
+          <Text style={s.footerLink} >Termos de uso</Text>
           <Text style={s.footerDot}>·</Text>
           <Text style={s.footerLink} onPress={() => Linking.openURL('https://instagram.com')}>Instagram</Text>
         </View>
