@@ -1,13 +1,13 @@
 import { router } from 'expo-router'
 import React from 'react'
 import {
-  View,
+  Image,
+  Linking,
+  ScrollView,
+  StyleSheet,
   Text,
   TouchableOpacity,
-  StyleSheet,
-  ScrollView,
-  Linking,
-  Image,
+  View,
 } from 'react-native'
  
 // ─── Paleta ──────────────────────────────────────────────
@@ -56,6 +56,9 @@ function Header() {
           </TouchableOpacity>
           <TouchableOpacity style={s.btnCadastro} onPress={() => router.push('/cadastro')}>
             <Text style={s.btnCadastroText}>Cadastrar</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={s.btnPerfil} onPress={() => router.push('/perfil')}>
+            <Text style={s.btnPerfilText}>Perfil</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -333,7 +336,13 @@ const s = StyleSheet.create({
     paddingHorizontal: 14, paddingVertical: 8,
     borderRadius: 10, backgroundColor: '#e8f1fb',
   },
+ btnPerfil: {
+    paddingHorizontal: 14, paddingVertical: 8,
+    borderRadius: 10, backgroundColor: '#d3d3d3',
+  },
+
   btnLoginText:   { color: BLUE,  fontSize: 13, fontWeight: '600' },
+    btnPerfilText:   { color: BLUE,  fontSize: 13, fontWeight: '600' },
   btnCadastro: {
     paddingHorizontal: 14, paddingVertical: 8,
     borderRadius: 10, backgroundColor: ORANGE,
