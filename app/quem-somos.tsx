@@ -1,13 +1,13 @@
+import { router } from 'expo-router';
 import React from 'react';
 import {
+  Image,
   ScrollView,
   StyleSheet,
   Text,
-  View,
   TouchableOpacity,
-  Image,
+  View,
 } from 'react-native';
-import { router } from 'expo-router';
 
 const ORANGE = '#e07b2a';
 const BLUE = '#1a6bbf';
@@ -25,9 +25,10 @@ export default function QuemSomos() {
           <Text style={styles.backButtonText}>← Voltar</Text>
         </TouchableOpacity>
 
+
         <Image
-          source={require('../assets/images/logo.png')}
-          style={styles.heroImage}
+          source={require('../assets/images/instituto.jpg')}
+          style={styles.backgroundImage}
           resizeMode="contain"
         />
 
@@ -175,7 +176,6 @@ export default function QuemSomos() {
 
         <TouchableOpacity
           style={styles.ctaButton}
-          onPress={() => router.push('/doe')}
         >
           <Text style={styles.ctaButtonText}>
             ❤️ Quero ajudar
@@ -186,6 +186,7 @@ export default function QuemSomos() {
     </ScrollView>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -202,6 +203,14 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 180,
     marginVertical: 20,
+  },
+
+  backgroundImage: {
+    width: '100%',
+    height: 1000,
+    marginVertical: 20, 
+    borderRadius: 20,
+    
   },
 
   badge: {
