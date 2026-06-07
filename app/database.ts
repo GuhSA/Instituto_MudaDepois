@@ -1,4 +1,5 @@
 import * as SQLite from 'expo-sqlite';
+import React from 'react-native';
 
 let db: SQLite.SQLiteDatabase | null = null
 
@@ -17,3 +18,4 @@ export async function getDB(): Promise<SQLite.SQLiteDatabase> {
     }
     return db;
 }
+    
